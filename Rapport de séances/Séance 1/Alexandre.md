@@ -30,6 +30,7 @@ En théorie l'accélération mesure l'accélération sur les différents axes, m
 
 Problème : en effectuant des tests on remarque qu'un accoup fausse les résultats.
 Un petit accoup vers l'avant par l'exemple fait que le capteur renvoie une accélération de -17.
+Nous verrons plus tard si cela est vraiment dérangeant pour le controle de la voiture ou non.
 
 Pour l'instant, à l'aide de if, le capteur renvoie avant, derrière, gauche ou droite selon l'inclinaison du capteur.
 (Il peut aussi envoyer avant/gauche, derrière/droite ect.....)
