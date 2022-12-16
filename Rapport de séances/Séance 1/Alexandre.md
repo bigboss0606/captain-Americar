@@ -33,4 +33,4 @@ Un petit accoup vers l'avant par l'exemple fait que le capteur renvoie une accé
 Nous verrons plus tard si cela est vraiment dérangeant pour le controle de la voiture ou non.
 
 Pour l'instant, à l'aide de if, le capteur renvoie avant, derrière, gauche ou droite selon l'inclinaison du capteur.
-(Il peut aussi envoyer avant/gauche, derrière/droite ect.....)
+(Il peut aussi renvoyer une combinaison des 2 : avant/gauche, derrière/droite ect.....)
