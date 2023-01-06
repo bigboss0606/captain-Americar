@@ -10,7 +10,7 @@ La première erreur était que la communication entre 2 modules Bluetooth doit �
 
 
 Ne comprenant pas la source de l'erreur (après plusieurs vérifications des branchements des deux modules, du code, etc.), j'ai décidé d'aider Robin dans la construction de la maquette temporaire (ou pas) de la voiture. Puis j'ai commencé à faire le code se chargeant de l'envoi des données.
-Mais cela est assez problématique puisque pour pouvoir construire le gant et commencer les premiers tests sur la sensibilité de l'accéléromètre, il faut que la partie accéléromètre + Bluetooth soit opérationnel.
+Ce problème est assez problématique puisque pour pouvoir construire le gant et commencer les premiers tests sur la sensibilité de l'accéléromètre, il faut que la partie accéléromètre + Bluetooth soit opérationnel.
 
 # III. Traitement des donnés
 
