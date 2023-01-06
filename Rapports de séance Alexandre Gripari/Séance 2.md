@@ -18,8 +18,7 @@ Mais cela est assez problématique puisque pour pouvoir construire le gant et co
 Pour l'instant le capteur renvoie des "états" : (avant, arrière, avant/gauche...). Pour faire simple au début nous enverrons l'information sous forme de mot ex:
 avant/droit, et dans le programme de la carte de la voiture il y aura un "if" pour chaque direction possible et on fera tourner un moteur plus ou moins vite selon le message reçu.
 
-Il serait en revanche meilleur d'envoyer directement sous force de chiffre l'inclinaison de la main, pour pouvoir ainsi controler la vitesse de la voiture en fonction de l'inclinaison de la main
-
+Il serait en revanche meilleur d'envoyer directement sous forme de chiffre l'inclinaison de la main selon les différents axes, pour pouvoir ainsi controler la vitesse de la voiture en fonction de l'inclinaison de la main.
 
 
  # III. Code
