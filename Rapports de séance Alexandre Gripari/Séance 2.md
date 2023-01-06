@@ -1,4 +1,4 @@
-# I. Principe bluetooth
+# I. Bluetooth
 
 Tentative de relier la carte qui controle les moteurs et la carte qui s'occupe de récupérer les informations données par l'accéléromètre et le gyroscope.
 On a récupérer deux module (1 maitre, 1 esclave) qui sont déjà couplés ensemble.
