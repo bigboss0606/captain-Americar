@@ -17,6 +17,7 @@ SoftwareSerial BlueT(RX,TX);
  
 
 void setup() {
+  // setup des moteurs
   pinMode(ENA,OUTPUT); // Configurer
   pinMode(ENB,OUTPUT); // les broches
   pinMode(IN1,OUTPUT); // comme sortie
@@ -32,6 +33,7 @@ void setup() {
   digitalWrite(IN3,HIGH);
   digitalWrite(IN4,LOW);
 
+  //setup du module bluetooth
   Serial.begin(9600);
   delay(500);
   Serial.println("Bonjour -Pret pour les commandes AT");
@@ -41,48 +43,39 @@ void setup() {
 
 
 void loop() {
-  // Moteur A - Plein régime
-  // Moteur B - Mi-régime
-
   String reponse = "";
   while (BlueT.available()) {
         reponse += char(BlueT.read()); 
-
-
   }
   Serial.println(reponse);
 
   
-  if(reponse == "Z")
+  if(reponse == "Z") //avant
   {
       Serial.println("1");
       analogWrite(ENA,255);
       analogWrite(ENB,255);
   }
-  else if(reponse == "ZQ")
+  else if(reponse == "ZQ") //avant gauche
   {
       analogWrite(ENA,255);
       analogWrite(ENB,170);
   }
-  else if(reponse == "ZD")
+  else if(reponse == "ZD") //avant droite
   {
       analogWrite(ENA,170);
       analogWrite(ENB,255);
   }
-  else if(reponse == "D")
+  else if(reponse == "D") //droite
   {
       analogWrite(ENA,0);
       analogWrite(ENB,255);
   }
   
-  else if(reponse == "Q")
+  else if(reponse == "Q") //gauche
   {
       analogWrite(ENA,255);
       analogWrite(ENB,0);
   }
-
-  /*while (Serial.available()) {
-    BlueT.write(char(Serial.read())); 
-  }*/
   delay(100);
 } 
