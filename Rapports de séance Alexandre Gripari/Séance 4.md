@@ -20,7 +20,7 @@ Grâce à la fonction Map je peux convertir l'angle en degré qui varie entre -9
 Le problème et qu'il faut maintenant trouver un moyen de traiter cette information.
 
 Pour avoir un prototype encore fonctionnel pour la démonstration, je n'ai pas encore fait les changements de branchements de l'arduino Uno à la Nano.
-Il nous faut aussi une breadboard plus petites et un autre module de pile pour avoir un système totalement indépendant.
+Il nous faut aussi une breadboard plus petite et un autre module de pile pour avoir un système totalement indépendant.
 
 
 
