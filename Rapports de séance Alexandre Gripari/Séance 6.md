@@ -59,7 +59,7 @@ A noter qu'on uilise : BlueT.write(info.c_str(),info.length()), puisqu'on ne peu
 
 Il nous reste encore à faire des tests pour que le contrôle soit facile. Pour l'instant, la voiture est considérée comme "en train d'avancer" si l'angle en x est supérieur à 20 en valeur absolue.
 
-De plus, on remarquera que la puissance maximale du moteur est atteinte pour un angle de 70 degrés et non pas 90. Après plusieurs tests, nous avons remarqué qu'il n'est surement pas très pratique de pencher sa main à 90 degrés. Nous avons donc fixé comme valeur arbitraire 70 degré.
+De plus, on remarquera que la puissance maximale du moteur est atteinte pour un angle de 70 degrés et non pas 90. Après plusieurs tests et en y réfélchissant, nous pensons qu'il n'est surement pas très pratique de pencher sa main à 90 degrés. Nous avons donc fixé comme valeur arbitraire 70 degré.
 
 Toutes ces valeurs sont sujets à changement puisqu'il est difficile de juger la maniabilité de la voiture en n'utilisant que l'accéléromètre.
 Nous ferons des changements la séance prochaine une fois le gant opérationnel.
