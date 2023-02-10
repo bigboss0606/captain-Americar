@@ -4,9 +4,9 @@ Pendant le début de la séance nous nous somme concentré sur l'échange d'info
 Au final le plus pratique est d'envoyer l'information sous la forme d'un couple séparé d'un slash qui contient comme information quelle puissance envoyer au moteur.
 Pour la marche arrière nous avons décidé de mettre un moins devant.
 
-Le code de mon coté résultant de ces différents essais, est le suivant :
+Le code, de mon coté résultant de ces différents essais, est le suivant :
 
-'''
+```
   float angle_x = -(atan((a.acceleration.x) / sqrt(pow((a.acceleration.y),2) + pow((a.acceleration.z),2))) * 180/3.14);
   float angle_y = (atan((a.acceleration.y) / sqrt(pow((a.acceleration.x),2) + pow((a.acceleration.z),2))) * 180/3.14);
   if (angle_x >=20){
@@ -43,9 +43,6 @@ Le code de mon coté résultant de ces différents essais, est le suivant :
     Moteur1 = 255;
   }
   if (Moteur2>255){
-
-
-    
     Moteur2 = 255;
   }
   String info = String(Moteur1)+"/"+String(Moteur2);
@@ -55,5 +52,17 @@ Le code de mon coté résultant de ces différents essais, est le suivant :
   BlueT.write(info.c_str(),info.length());
   delay(100);
 }
+```
 
-'''
+Il nous reste encore à faire des tests pour que le controle soit facile. Pour l'instant la voiture est considéré comme "en train d'avancer" si l'angle en x est supérieur à 20 en valeur absolue.
+
+De plus on remarquera que la puissance maximale du moteur est atteinte pour un angle de 70 degré et non pas 90. Après plusieurs tests nous avons remarqué qu'il n'est pas très pratique de pencher sa main à 90 degré.
+
+# II. Le gant
+
+Le gant est bientot fini ( même si on a toujours pas le gant, tous les composants à attacher sont prêts), j'ai décidé de le relié d'alimenter la carte directement avec une pile de 9V ce qui permet d'avoir un système embarqué totalement indépendant (plus besoin de l'ordinateur pour alimenter les composants et la carte).
+
+# III. Extra
+
+Nous avons enfin relié le système de la voiture à un intérupteur pour éviter le faite de systématiquement enlever une pile pour éteindre le système.
+Nous avons aussi pensé à d'éventuelles fonctionalité à rajouter si nous finissons le projet en avance. (des phares, un klaxon qui pouront éventuelement être controlé par un capteur de flexion).
