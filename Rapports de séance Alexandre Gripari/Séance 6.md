@@ -1,8 +1,8 @@
 # I. Code / échange d'information
 
-Pendant le début de la séance nous nous somme concentré sur l'échange d'information entre l'accéléromètre et les moteurs.
-Au final le plus pratique est d'envoyer l'information sous la forme d'un couple séparé d'un slash qui contient comme information quelle puissance envoyer au moteur.
-Pour la marche arrière nous avons décidé de mettre un moins devant.
+Pendant le début de la séance, nous nous sommes concentrés sur l'échange d'informations entre l'accéléromètre et les moteurs.
+Au final, le plus pratique est d'envoyer l'information sous la forme d'un couple séparé d'un slash qui contient comme information quelle puissance envoyer au moteur.
+Pour la marche arrière, nous avons décidé de mettre un moins devant.
 
 Le code, de mon coté résultant de ces différents essais, est le suivant :
 
@@ -54,15 +54,18 @@ Le code, de mon coté résultant de ces différents essais, est le suivant :
 }
 ```
 
-Il nous reste encore à faire des tests pour que le controle soit facile. Pour l'instant la voiture est considéré comme "en train d'avancer" si l'angle en x est supérieur à 20 en valeur absolue.
+Il nous reste encore à faire des tests pour que le contrôle soit facile. Pour l'instant, la voiture est considérée comme "en train d'avancer" si l'angle en x est supérieur à 20 en valeur absolue.
 
-De plus on remarquera que la puissance maximale du moteur est atteinte pour un angle de 70 degré et non pas 90. Après plusieurs tests nous avons remarqué qu'il n'est pas très pratique de pencher sa main à 90 degré.
+De plus, on remarquera que la puissance maximale du moteur est atteinte pour un angle de 70 degrés et non pas 90. Après plusieurs tests, nous avons remarqué qu'il n'est pas très pratique de pencher sa main à 90 degrés. Nous avons donc fixé comme valeur arbitraire 70 degré.
+
+Toutes ces valeurs sont, sujets à changement puisqu'il est difficile de juger la maniabilité de la voiture en n'utilisant que l'accéléromètre.
+Nous ferons des changements la séance prochaine une fois le gant opérationnel.
 
 # II. Le gant
 
-Le gant est bientot fini ( même si on a toujours pas le gant, tous les composants à attacher sont prêts), j'ai décidé de le relié d'alimenter la carte directement avec une pile de 9V ce qui permet d'avoir un système embarqué totalement indépendant (plus besoin de l'ordinateur pour alimenter les composants et la carte).
+Le gant est bientôt fini (même si on n'a toujours pas le gant, tous les composants à attacher sont prêts.), j'ai décidé de le relier d'alimenter la carte directement avec une pile de 9V ce qui permet d'avoir un système embarqué totalement indépendant (plus besoin de l'ordinateur pour alimenter les composants et la carte).
 
 # III. Extra
 
-Nous avons enfin relié le système de la voiture à un intérupteur pour éviter le faite de systématiquement enlever une pile pour éteindre le système.
-Nous avons aussi pensé à d'éventuelles fonctionalité à rajouter si nous finissons le projet en avance. (des phares, un klaxon qui pouront éventuelement être controlé par un capteur de flexion).
+Nous avons enfin relié le système de la voiture à un interrupteur pour éviter le faite de systématiquement enlever une pile pour éteindre le système.
+Nous avons aussi pensé à d'éventuelles fonctionnalités à rajouter si nous finissons le projet en avance. (des phares et/ou un klaxon qui pouront éventuellement être contrôle par un capteur de flexion).
