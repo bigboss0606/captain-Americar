@@ -4,6 +4,8 @@ Pendant le début de la séance, nous nous sommes concentrés sur l'échange d'i
 Au final, le plus pratique est d'envoyer l'information sous la forme d'un couple séparé d'un slash qui contient comme information quelle puissance envoyer au moteur.
 Pour la marche arrière, nous avons décidé de mettre un moins devant.
 
+Exemple : MoteurA/MoteurB
+
 Le code, de mon coté résultant de ces différents essais, est le suivant :
 
 ```
@@ -53,6 +55,7 @@ Le code, de mon coté résultant de ces différents essais, est le suivant :
   delay(100);
 }
 ```
+A noter qu'on uilise : BlueT.write(info.c_str(),info.length()), puisqu'on ne peut pas envoyer d'objet de type String avec BlueT.write.
 
 Il nous reste encore à faire des tests pour que le contrôle soit facile. Pour l'instant, la voiture est considérée comme "en train d'avancer" si l'angle en x est supérieur à 20 en valeur absolue.
 
@@ -63,7 +66,7 @@ Nous ferons des changements la séance prochaine une fois le gant opérationnel.
 
 # II. Le gant
 
-Le gant est bientôt fini (même si on n'a toujours pas le gant, tous les composants à attacher sont prêts.), j'ai décidé de le relier d'alimenter la carte directement avec une pile de 9V ce qui permet d'avoir un système embarqué totalement indépendant (plus besoin de l'ordinateur pour alimenter les composants et la carte).
+Le gant est bientôt fini (même si on n'a toujours pas le gant, tous les composants à attacher sont prêts.), j'ai décidé d'alimenter la carte directement avec une pile de 9V, ce qui permet d'avoir un système embarqué totalement indépendant (plus besoin de l'ordinateur pour alimenter les composants et la carte).
 
 # III. Extra
 
