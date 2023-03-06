@@ -117,18 +117,18 @@ void loop() {
    * pour éviter les légers mouvements parasites (il est difficile de rester parfaitement droit).
    * De plus la vitesse maximale est atteinte pour un angle de 70 degrés et pas 90 puisque n'est pas très pratique de faire un angle de 90 degrés avec sa maint
    */
-  
+  /* la fonction de map permet de modifier une plage de donnée, ex: 0 à 70 devient 0 à 255*/
   if (angle_x >=10){
     if (angle_y>=20) {
-      Moteur1 = map(angle_x,10,70,128,255);
-      Moteur2 = map(angle_x,10,70,128,255) - map(angle_y,20,70,0,127);
-    }
+      Moteur1 = map(angle_x,10,70,128,255);                             /* cas devant/droite donc on soustrait une valeur au moteur droit qui est proportionelle*/
+      Moteur2 = map(angle_x,10,70,128,255) - map(angle_y,20,70,0,127);  /*à l'angle de l'axe y*/
+    }                                                                  
     else if (angle_y<-20) {
       Moteur1 = map(angle_x,10,70,128,255) + map(angle_y,-70,-20,-127,0);
       Moteur2 = map(angle_x,10,70,128,255);
     }
     else {
-      Moteur1 = map(angle_x,10,70,0,255);
+      Moteur1 = map(angle_x,10,70,0,255); /* cas devant seulement donc ne dépend que de l'angle de l'axe x */
       Moteur2 = map(angle_x,10,70,0,255);
     }
   }
@@ -148,7 +148,7 @@ void loop() {
   }
   else if ((angle_x<=10) && (angle_x>=-20)){
     if (angle_y >= 20) {
-      Moteur1 = map(angle_y,20,70,0,255);
+      Moteur1 = map(angle_y,20,70,0,255); /* On active que le moteur gauche*/
       Moteur2 = 0;
     }
     else if (angle_y<-20) {
@@ -156,7 +156,7 @@ void loop() {
       Moteur2 = -map(angle_y,-70,-20,-255,0);
       }
     else {
-      Moteur1 = 0;
+      Moteur1 = 0; /* le dernier cas, on ne bouge pas */
       Moteur2 = 0;
     }
   }
